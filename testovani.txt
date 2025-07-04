@@ -1,0 +1,171 @@
+TASK MANAGER
+Projekt 4
+
+Funkce: hlavni_menu()
+
+Název testu: Spuštění funkce z hlavního menu
+Typ testu: Pozitivní test
+Popis: Ověření, že volba číslo 1 spustí funkci pridat_ukol.
+Vstupní podmínky: Program běží a zobrazuje hlavní menu.
+Kroky testu:
+1.	Spusťte program.
+2.	Ověřte, že se zobrazí hlavní menu.
+3.	Zadejte 1 a stiskněte Enter.
+
+Očekávaný výsledek: Spustí se funkce pridat_ukol().
+Skutečný výsledek: Funkce byla spuštěna a zobrazila se výzva k zadání názvu úkolu.
+Stav: Pass
+Poznámky: Test ověří, že uživatel může správně vybírat možnosti z nabídky.
+
+
+
+Název testu: Neplatná volba v hlavním menu
+Typ testu: Negativní test
+Popis: Otestování programu při zadání neplatné volby.
+Vstupní podmínky: Hlavní menu je zobrazeno.
+Kroky testu:
+1.	Zadejte číslo, které není uvedeno ve výběru nebo písmeno a potvrďte.
+
+Očekávaný výsledek: Program vypíše chybu: „Neplatná volba. Zkuste to znovu.“
+Skutečný výsledek: Chybová hláška zobrazena.
+Stav: Pass
+Poznámky: Test ověří správnou reakci programu na neplatnou volbu.
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+
+Funkce: pridat_ukol()
+
+Název testu: Hraniční případ – přidání prvního úkolu
+Typ testu: Hraniční případ
+Popis: Test chování při přidání úplně prvního úkolu.
+Vstupní podmínky: Seznam ukoly je prázdný.
+Kroky testu: 
+1.  Přidejte jeden platný úkol.
+
+Očekávaný výsledek: Seznam bude obsahovat 1 úkol.
+Skutečný výsledek: Úkol byl přidán.
+Stav: Pass
+Poznámky: Kontrola správné přípravy a vytvoření  seznamu úkolů.
+
+
+
+Název testu: Přidání platného úkolu
+Typ testu: Pozitivní test
+Popis: Přidání úkolu s platnými údaji.
+Vstupní podmínky: Seznam ukoly už obsahuje aspoň jeden úkol.
+Kroky testu:
+1.	Zadejte název: Nakoupit
+2.	Zadejte popis: Koupit jahody a banány.
+
+Očekávaný výsledek: Úkol bude přidán do seznamu.
+Skutečný výsledek: Úkol byl přidán.
+Stav: Pass
+Poznámky: Test ověřuje správné přidání úkolu do už existujícího seznamu úkolů.
+
+
+
+Název testu: Prázdný název úkolu
+Typ testu: Negativní test
+Popis: Ověření, že nelze přidat úkol bez názvu.
+Vstupní podmínky: Seznam může být prázdný.
+Kroky testu:
+1.	Nechte název prázdný a stiskněte Enter.
+
+Očekávaný výsledek: Program zobrazí varování.
+Skutečný výsledek: Zobrazí se hláška: „Název úkolu nesmí být prázdný.“
+Stav: Pass
+Poznámky: Ověření validace vstupních údajů.
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+
+Funkce: zobrazit_ukoly()
+
+Název testu: Zobrazení existujících úkolů
+Typ testu: Pozitivní test
+Popis: Ověření, že program vypíše správně zadané úkoly. 
+Vstupní podmínky: V seznamu jsou 2 úkoly.
+Kroky testu:
+1.  Zavolej funkci zobrazit_ukoly().
+
+Očekávaný výsledek: Výpíšou se oba úkoly ve správném formátu.
+Skutečný výsledek: Úkoly se vypsaly.
+Stav: Pass
+Poznámky: Kontrola běžného použití funkce.
+
+
+
+Název testu: Zobrazení prázdného seznamu
+Typ testu: Hraniční případ
+Popis: Ověření reakce, když nejsou žádné úkoly.
+Vstupní podmínky: Seznam ukoly je prázdný.
+Kroky testu:
+1.  Zavolej funkci zobrazit_ukoly().
+
+Očekávaný výsledek: Zobrazí se hláška o prázdném seznamu.
+Skutečný výsledek:Zobrazí se informace: „Seznam úkolů je prázdný.“
+Stav: Pass
+Poznámky: Test ověří správnou reakci programu na neplatnou volbu.
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+
+Funkce: odstranit_ukol()
+
+Název testu: Odstranění existujícího úkolu
+Typ testu: Pozitivní test
+Popis: Odstranění konkrétního úkolu ze seznamu.
+Vstupní podmínky: V seznamu jsou 2 úkoly.
+Kroky testu:
+1.  Zadej číslo 2.
+
+Očekávaný výsledek: Druhý úkol bude odstraněn.
+Skutečný výsledek: Potvrzení a odstranění úkolu.
+Stav: Pass
+Poznámky: Ověření funkce mazání.
+
+
+
+Název testu: Zadání neplatného čísla
+Typ testu: Negativní test
+Popis: Zadání čísla mimo rozsah seznamu.
+Vstupní podmínky: V seznamu jsou 2 úkoly.
+Kroky testu:
+1.  Zadej číslo 10.
+
+Očekávaný výsledek: Zobrazí se chybová hláška o neplatném čísle.
+Skutečný výsledek: Chyba zobrazena.
+Stav: Pass
+Poznámky: Ošetření situace při zadání mimo rozsah.
+
+
+
+Název testu: Hraniční případ – odstranění posledního úkolu
+Typ testu: Hraniční případ
+Popis: Ověření chování po odstranění jediného úkolu.
+Vstupní podmínky: Seznam obsahuje 1 úkol.
+Kroky testu:
+1.  Odstraň tento úkol.
+
+Očekávaný výsledek: Seznam bude prázdný.
+Skutečný výsledek: Úkol odstraněn, seznam prázdný.
+Stav: Pass
+Poznámky: Ověření správného chování programu při odstranění všech úkolů ze seznamu.
+
+
+
+Název testu: Pokus o odstranění z prázdného seznamu
+Typ testu: Negativní test
+Popis: Ověření správné reakce na neexistující úkoly.
+Vstupní podmínky: Seznam ukoly je prázdný.
+Kroky testu:
+1.  Zavolej funkci odstranit_ukol().
+
+Očekávaný výsledek: Hláška o prázdném seznamu.
+Skutečný výsledek: Zobrazena správná hláška.
+Stav: Pass
+Poznámky: Brání chybám při mazání bez dat
